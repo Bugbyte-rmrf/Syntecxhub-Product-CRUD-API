@@ -1,0 +1,1197 @@
+{
+  "info": {
+    "_postman_id": "950018dc-740e-46c5-b7c0-341d9ee4388f",
+    "name": "Syntecxhub - Product CRUD API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "59250906",
+    "_collection_link": "https://go.postman.co/collection/59250906-950018dc-740e-46c5-b7c0-341d9ee4388f?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Welcome Route",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            ""
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Welcome Route",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                ""
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "73"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"49-ISAEoIcWPRvc6+xNGh4ZhOCEcdo\""
+            },
+            {
+              "key": "date",
+              "value": "Wed, 28 Oct 2026 11:11:33 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"message\": \"Welcome to the Product CRUD API\",\n  \"endpoints\": \"/api/products\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get All Products",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "products"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get All Products",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/products",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "products"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "155"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"9b-82JndiV19dTwJPaC3hhBLGjomZs\""
+            },
+            {
+              "key": "date",
+              "value": "Wed, 28 Oct 2026 11:16:11 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"success\": true,\n  \"count\": 0,\n  \"pagination\": {\n    \"totalProducts\": 0,\n    \"totalPages\": 0,\n    \"currentPage\": 1,\n    \"limit\": 10,\n    \"hasNextPage\": false,\n    \"hasPreviousPage\": false\n  },\n  \"data\": []\n}"
+        }
+      ]
+    },
+    {
+      "name": "Create Product",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Wireless Mouse\",\n  \"price\": 25.99,\n  \"description\": \"Ergonomic wireless mouse\",\n  \"category\": \"Electronics\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "products"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Create Product",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Wireless Mouse\",\n  \"price\": 25.99,\n  \"description\": \"Ergonomic wireless mouse\",\n  \"category\": \"Electronics\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/products",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "products"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "177"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"b1-hfaaVzCvCcablJHts7jMbDlRD8Q\""
+            },
+            {
+              "key": "date",
+              "value": "Wed, 28 Oct 2026 11:18:02 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"success\": true,\n  \"message\": \"Product created successfully\",\n  \"data\": {\n    \"id\": 1,\n    \"name\": \"Wireless Mouse\",\n    \"price\": 25.99,\n    \"description\": \"Ergonomic wireless mouse\",\n    \"category\": \"Electronics\"\n  }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Product by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/products/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "products",
+            "1"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Product by ID",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/products/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "products",
+                "1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "136"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"88-kEMNK47thS6d8uwl7o7rIt5W3tQ\""
+            },
+            {
+              "key": "date",
+              "value": "Wed, 28 Oct 2026 11:20:48 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"success\": true,\n  \"data\": {\n    \"id\": 1,\n    \"name\": \"Wireless Mouse\",\n    \"price\": 25.99,\n    \"description\": \"Ergonomic wireless mouse\",\n    \"category\": \"Electronics\"\n  }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Update Product",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Wireless Mouse Pro\",\n  \"price\": 35.99,\n  \"description\": \"Updated ergonomic wireless mouse\",\n  \"category\": \"Electronics\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/products/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "products",
+            "1"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Update Product",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Wireless Mouse Pro\",\n  \"price\": 35.99,\n  \"description\": \"Updated ergonomic wireless mouse\",\n  \"category\": \"Electronics\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/products/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "products",
+                "1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "189"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"bd-rzvziI9m4yVZL0rpr5lTUN0/ozs\""
+            },
+            {
+              "key": "date",
+              "value": "Wed, 28 Oct 2026 11:22:05 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"success\": true,\n  \"message\": \"Product updated successfully\",\n  \"data\": {\n    \"id\": 1,\n    \"name\": \"Wireless Mouse Pro\",\n    \"price\": 35.99,\n    \"description\": \"Updated ergonomic wireless mouse\",\n    \"category\": \"Electronics\"\n  }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Filter Products by Category",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/products?category=Electronics",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "products"
+          ],
+          "query": [
+            {
+              "key": "category",
+              "value": "Electronics"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Filter Products by Category",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/products?category=Electronics",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "products"
+              ],
+              "query": [
+                {
+                  "key": "category",
+                  "value": "Electronics"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "279"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"117-2TjIWv+66Ps1RNtYbfviUPel82k\""
+            },
+            {
+              "key": "date",
+              "value": "Wed, 28 Oct 2026 11:23:06 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"success\": true,\n  \"count\": 1,\n  \"pagination\": {\n    \"totalProducts\": 1,\n    \"totalPages\": 1,\n    \"currentPage\": 1,\n    \"limit\": 10,\n    \"hasNextPage\": false,\n    \"hasPreviousPage\": false\n  },\n  \"data\": [\n    {\n      \"id\": 1,\n      \"name\": \"Wireless Mouse Pro\",\n      \"price\": 35.99,\n      \"description\": \"Updated ergonomic wireless mouse\",\n      \"category\": \"Electronics\"\n    }\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "Filter Products by Minimum Price",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/products?minPrice=20",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "products"
+          ],
+          "query": [
+            {
+              "key": "minPrice",
+              "value": "20"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Filter Products by Minimum Price",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/products?minPrice=20",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "products"
+              ],
+              "query": [
+                {
+                  "key": "minPrice",
+                  "value": "20"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "279"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"117-2TjIWv+66Ps1RNtYbfviUPel82k\""
+            },
+            {
+              "key": "date",
+              "value": "Wed, 28 Oct 2026 11:24:05 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"success\": true,\n  \"count\": 1,\n  \"pagination\": {\n    \"totalProducts\": 1,\n    \"totalPages\": 1,\n    \"currentPage\": 1,\n    \"limit\": 10,\n    \"hasNextPage\": false,\n    \"hasPreviousPage\": false\n  },\n  \"data\": [\n    {\n      \"id\": 1,\n      \"name\": \"Wireless Mouse Pro\",\n      \"price\": 35.99,\n      \"description\": \"Updated ergonomic wireless mouse\",\n      \"category\": \"Electronics\"\n    }\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "Filter Products by Maximum Price",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/products?maxPrice=30",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "products"
+          ],
+          "query": [
+            {
+              "key": "maxPrice",
+              "value": "30"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Filter Products by Maximum Price",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/products?maxPrice=30",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "products"
+              ],
+              "query": [
+                {
+                  "key": "maxPrice",
+                  "value": "30"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "155"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"9b-82JndiV19dTwJPaC3hhBLGjomZs\""
+            },
+            {
+              "key": "date",
+              "value": "Wed, 28 Oct 2026 11:34:23 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"success\": true,\n  \"count\": 0,\n  \"pagination\": {\n    \"totalProducts\": 0,\n    \"totalPages\": 0,\n    \"currentPage\": 1,\n    \"limit\": 10,\n    \"hasNextPage\": false,\n    \"hasPreviousPage\": false\n  },\n  \"data\": []\n}"
+        }
+      ]
+    },
+    {
+      "name": "Filter Products by Price Range",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/products?minPrice=20&maxPrice=50",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "products"
+          ],
+          "query": [
+            {
+              "key": "minPrice",
+              "value": "20"
+            },
+            {
+              "key": "maxPrice",
+              "value": "50"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Filter Products by Price Range",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/products?minPrice=20&maxPrice=50",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "products"
+              ],
+              "query": [
+                {
+                  "key": "minPrice",
+                  "value": "20"
+                },
+                {
+                  "key": "maxPrice",
+                  "value": "50"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "279"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"117-2TjIWv+66Ps1RNtYbfviUPel82k\""
+            },
+            {
+              "key": "date",
+              "value": "Wed, 28 Oct 2026 11:35:29 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"success\": true,\n  \"count\": 1,\n  \"pagination\": {\n    \"totalProducts\": 1,\n    \"totalPages\": 1,\n    \"currentPage\": 1,\n    \"limit\": 10,\n    \"hasNextPage\": false,\n    \"hasPreviousPage\": false\n  },\n  \"data\": [\n    {\n      \"id\": 1,\n      \"name\": \"Wireless Mouse Pro\",\n      \"price\": 35.99,\n      \"description\": \"Updated ergonomic wireless mouse\",\n      \"category\": \"Electronics\"\n    }\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get Products with Pagination",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/products?page=1&limit=5",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "products"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "limit",
+              "value": "5"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get Products with Pagination",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/products?page=1&limit=5",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "products"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "5"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "278"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"116-SHJsD5WWyMHRX3AIKeD0yUq6bFc\""
+            },
+            {
+              "key": "date",
+              "value": "Wed, 28 Oct 2026 11:36:33 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"success\": true,\n  \"count\": 1,\n  \"pagination\": {\n    \"totalProducts\": 1,\n    \"totalPages\": 1,\n    \"currentPage\": 1,\n    \"limit\": 5,\n    \"hasNextPage\": false,\n    \"hasPreviousPage\": false\n  },\n  \"data\": [\n    {\n      \"id\": 1,\n      \"name\": \"Wireless Mouse Pro\",\n      \"price\": 35.99,\n      \"description\": \"Updated ergonomic wireless mouse\",\n      \"category\": \"Electronics\"\n    }\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "Delete Product",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/products/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "products",
+            "1"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Delete Product",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/products/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "products",
+                "1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "189"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"bd-FWe8yrwezX/y3eeLODQ9KAYQ5rM\""
+            },
+            {
+              "key": "date",
+              "value": "Wed, 28 Oct 2026 11:37:45 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"success\": true,\n  \"message\": \"Product deleted successfully\",\n  \"data\": {\n    \"id\": 1,\n    \"name\": \"Wireless Mouse Pro\",\n    \"price\": 35.99,\n    \"description\": \"Updated ergonomic wireless mouse\",\n    \"category\": \"Electronics\"\n  }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Test Product Not Found",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/products/99999",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "products",
+            "99999"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Test Product Not Found",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/products/99999",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "products",
+                "99999"
+              ]
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "47"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"2f-WhHoM/iVc5HN1JP4xmszB2vQ9gI\""
+            },
+            {
+              "key": "date",
+              "value": "Wed, 28 Oct 2026 11:38:54 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"success\": false,\n  \"message\": \"Product not found\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Test Invalid Route",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/invalid",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "invalid"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Test Invalid Route",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/invalid",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "invalid"
+              ]
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "45"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"2d-cNj29RQ25Pprcj6a6edy/V2YndQ\""
+            },
+            {
+              "key": "date",
+              "value": "Wed, 28 Oct 2026 11:40:05 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"success\": false,\n  \"message\": \"Route not found\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Test Invalid Product Data",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"\",\n  \"price\": -10,\n  \"description\": \"\",\n  \"category\": \"\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "products"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Test Invalid Product Data",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"\",\n  \"price\": -10,\n  \"description\": \"\",\n  \"category\": \"\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/products",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "products"
+              ]
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "80"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"50-R4IwQbutlYxBax+8fiYG4r+WgEU\""
+            },
+            {
+              "key": "date",
+              "value": "Wed, 28 Oct 2026 11:42:02 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"success\": false,\n  \"message\": \"Name, price, description and category are required\"\n}"
+        }
+      ]
+    }
+  ]
+}
