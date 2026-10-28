@@ -856,7 +856,7 @@ git branch -M main
 Replace the example URL with the URL of your actual GitHub repository:
 
 ```bash
-git remote add origin https://github.com/YOUR-USERNAME/Syntecxhub-Product-CRUD-API.git
+git remote add origin Example URL
 ```
 
 ### Step 8: Push the project
